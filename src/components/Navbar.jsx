@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "../style/navbar.css";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
         ☰
       </div>
 
-      <ul className="nav-link">
+      <ul className={`nav-link ${open ? "active" : ""}`}>
         <li>
           <Link to="/">List</Link>
         </li>
