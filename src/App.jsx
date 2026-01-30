@@ -1,4 +1,3 @@
-import "./style/app.css";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import TodoList from "./components/TodoList";
