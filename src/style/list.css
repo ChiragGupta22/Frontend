@@ -3,7 +3,6 @@ body {
   background: #f5f7fb;
 }
 
-/* Heading */
 .heading {
   color: #222;
   text-align: center;
@@ -11,7 +10,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* Table */
 .task-table {
   width: 100%;
   border-collapse: collapse;
@@ -43,14 +41,12 @@ body {
   transition: 0.3s;
 }
 
-/* Buttons wrapper (important for alignment) */
 .action-btns {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
 
-/* Delete Button */
 .btn-delete {
   padding: 10px 18px;
   font-size: 16px;
@@ -67,7 +63,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Update Button */
 .btn-update {
   padding: 10px 18px;
   font-size: 16px;
@@ -85,7 +80,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
   .heading {
     font-size: 22px;
