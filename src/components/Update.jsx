@@ -33,11 +33,14 @@ export default function Update() {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3200/updateTask/${id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(taskdata),
-      });
+      const res = await fetch(
+        `https://backend-gstc.onrender.com/updateTask/${id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(taskdata),
+        },
+      );
 
       const data = await res.json();
       console.log("PUT DATA:", data);
