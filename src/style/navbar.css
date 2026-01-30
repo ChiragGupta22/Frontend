@@ -1,0 +1,110 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  padding: 12px 20px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: white;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease;
+}
+
+.nav-link a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+}
+
+.nav-link a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #4f46e5;
+  transition: 0.3s;
+}
+
+.nav-link a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  display: block;
+}
+
+.nav-link.active {
+  display: flex;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-link {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+    gap: 25px;
+    background: none;
+    box-shadow: none;
+    animation: none;
+  }
+
+  .nav-link a {
+    color: white;
+    font-size: 19px;
+  }
+
+  .nav-link a::after {
+    background: white;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+}
