@@ -80,23 +80,88 @@ body {
   transform: scale(1.05);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .heading {
-    font-size: 22px;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .task-table {
+    font-size: 13px;
   }
 
   .task-table th,
   .task-table td {
-    padding: 10px;
-    font-size: 14px;
+    padding: 8px;
   }
 
   .action-btns {
     flex-direction: column;
+    gap: 6px;
   }
 
   .btn-delete,
   .btn-update {
     width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .heading {
+    font-size: 26px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .btn-delete,
+  .btn-update {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .btn-delete,
+  .btn-update {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .heading {
+    font-size: 34px;
+  }
+
+  .task-table {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 18px;
+    font-size: 18px;
+  }
+
+  .btn-delete,
+  .btn-update {
+    font-size: 18px;
+    padding: 12px 22px;
   }
 }

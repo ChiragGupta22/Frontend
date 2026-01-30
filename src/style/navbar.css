@@ -2,12 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 14px 30px;
   background: linear-gradient(90deg, #4f46e5, #6366f1);
   color: white;
   width: 100%;
-  position: sticky;
-  top: 0;
 }
 
 .logo {
@@ -18,7 +16,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-links a {
@@ -26,8 +24,7 @@
   color: white;
   font-weight: 600;
 }
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     gap: 10px;
@@ -37,18 +34,25 @@
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 15px;
   }
-}
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .navbar {
-    padding: 12px 30px;
+  .heading {
+    font-size: 22px;
   }
-}
 
-@media (min-width: 901px) {
-  .navbar {
-    padding: 15px 60px;
+  .task-table th,
+  .task-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .action-btns {
+    flex-direction: column;
+  }
+
+  .btn-delete,
+  .btn-update {
+    width: 100%;
   }
 }
