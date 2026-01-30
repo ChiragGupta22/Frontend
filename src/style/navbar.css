@@ -2,57 +2,87 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 30px;
   background: linear-gradient(90deg, #4f46e5, #6366f1);
-  color: white;
+  padding: 12px 25px;
   width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap; /* important */
 }
 
 .logo {
+  font-weight: 700;
   font-size: 22px;
-  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
 }
 
-.nav-links {
+.nav-link {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.nav-links a {
-  text-decoration: none;
+.nav-link a {
   color: white;
+  text-decoration: none;
   font-weight: 600;
+  font-size: 15px;
+  position: relative;
 }
-@media (max-width: 768px) {
+
+.nav-link a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.nav-link a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     text-align: center;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
+  .nav-link {
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
   }
 
-  .heading {
-    font-size: 22px;
-  }
-
-  .task-table th,
-  .task-table td {
-    padding: 10px;
+  .nav-link a {
     font-size: 14px;
   }
+}
 
-  .action-btns {
-    flex-direction: column;
+@media (min-width: 601px) and (max-width: 900px) {
+  .logo {
+    font-size: 24px;
   }
 
-  .btn-delete,
-  .btn-update {
-    width: 100%;
+  .nav-link a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 901px) {
+  .logo {
+    font-size: 26px;
+  }
+
+  .nav-link {
+    gap: 28px;
+  }
+
+  .nav-link a {
+    font-size: 18px;
   }
 }
